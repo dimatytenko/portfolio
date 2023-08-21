@@ -61,13 +61,6 @@ export const Menu = styled.div`
   z-index: 9999;
 `;
 
-export const MenuIcon = styled(IconSvg).attrs({
-  type: 'menu',
-  width: '40',
-  height: '40',
-  stroke: 'secondary',
-})``;
-
 // Footer
 export const StyledFooter = styled.footer`
   padding-bottom: 40px;
