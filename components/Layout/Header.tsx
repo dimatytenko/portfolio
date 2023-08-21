@@ -17,9 +17,11 @@ import {NavigationItems} from '@/components/NavigationItems';
 interface IHeaderProps {
   toggleDrawer: () => void;
   onCloseDrawer: () => void;
+  isOpen: boolean;
 }
 
 export const Header: React.FC<IHeaderProps> = ({
+  isOpen,
   toggleDrawer,
   onCloseDrawer,
 }) => {
@@ -39,7 +41,7 @@ export const Header: React.FC<IHeaderProps> = ({
           </DesktopWrapper>
           <MobileWrapper>
             <Menu onClick={toggleDrawer}>
-              <Hamburger />
+              <Hamburger toggled={isOpen} />
             </Menu>
           </MobileWrapper>
         </HeaderContent>

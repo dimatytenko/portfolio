@@ -11,4 +11,5 @@ export enum LINKS {
   PHONE = '+380666812092',
   EMAIL = 'amgpetronass@gmail.com',
   TELEGRAM = 'https://t.me/dimatytenko',
+  CV = 'https://drive.google.com/file/d/1-bhPHtrqXvLJ1E9UP6maCLLe_VLDWUnr/view?usp=drive_link',
 }

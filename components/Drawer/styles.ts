@@ -7,6 +7,7 @@ export const StyledDrawer = styled(Drawer)`
   &.rc-drawer-content {
     background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(32px);
+    -webkit-backdrop-filter: blur(32px); /* for Safari */
     padding: 150px 16px 16px 16px;
   }
 `;

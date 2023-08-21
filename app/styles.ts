@@ -19,7 +19,6 @@ export const StyledBody = styled.body`
 
 export const StyledMain = styled.main`
   flex: 1 1 auto;
-  padding: 40px 0;
 `;
 
 export const Container = styled.div`
@@ -46,7 +45,9 @@ export const DesktopWrapper = styled.div`
 `;
 
 // Home
-export const HomeWrapper = styled.section``;
+export const HomeWrapper = styled.section`
+  padding-bottom: 40px;
+`;
 
 export const HomeContent = styled.div`
   display: flex;
@@ -127,6 +128,11 @@ export const RightSide = styled.div`
     min-height: 500px;
     justify-content: space-around;
   }
+
+  ${Media.down.xs} {
+    min-height: 380px;
+    justify-content: space-around;
+  }
 `;
 
 export const Decor = styled.div<{$isEnd?: boolean}>`
@@ -168,7 +174,7 @@ export const CursorWrapper = styled.div`
 
   ${Media.down.m} {
     top: -80px;
-    left: 0;
+    left: -30px;
   }
 `;
 
@@ -209,8 +215,8 @@ export const ToolboxWrapper = styled.div`
   }
 
   ${Media.down.s} {
-    right: 30px;
-    top: -30px;
+    right: -40px;
+    top: -75px;
   }
 `;
 
@@ -258,5 +264,19 @@ export const ImageWrapper = styled.div`
       width: 286px;
       height: 274px;
     }
+  }
+`;
+
+export const PhotoWrapper = styled.div`
+  position: absolute;
+  bottom: 0;
+  left: 25px;
+
+  & > img {
+    // width: 376px;
+    // height: 380px;
+  }
+
+  ${Media.down.s} {
   }
 `;

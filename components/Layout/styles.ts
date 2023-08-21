@@ -6,8 +6,8 @@ import {IconSvg} from '@/ui-kit/Icon/Svg';
 import {Media} from '@/ui-kit/theme/breakpoints';
 
 export const StyledHeader = styled.header`
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 `;
 
 export const HeaderContent = styled.div`

@@ -25,6 +25,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
           <StyledBody className={poppins.className}>
             <Wrapper>
               <Header
+                isOpen={isOpen}
                 toggleDrawer={toggleDrawer}
                 onCloseDrawer={closeHandler}
               />

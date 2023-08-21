@@ -22,10 +22,13 @@ import {
   CheckWrapper,
   CheckIcon,
   ImageWrapper,
+  PhotoWrapper,
   DesktopWrapper,
   MobileWrapper,
 } from './styles';
 import monitor from '@/assets/images/monitor.png';
+import photo_1 from '@/assets/images/photo_1.png';
+import {LINKS} from '@/constants/common';
 
 export const metadata: Metadata = {
   title: 'Web developer portfolio',
@@ -61,9 +64,7 @@ export default function Home() {
                 </ToolboxWrapper>
               </Decor>
             </MobileWrapper>
-            <Button
-              href="https://drive.google.com/file/d/1-bhPHtrqXvLJ1E9UP6maCLLe_VLDWUnr/view?usp=drive_link"
-              target="_blank">
+            <Button href={LINKS.CV} target="_blank">
               <CvIcon />
               cv
             </Button>
@@ -90,6 +91,15 @@ export default function Home() {
               </Decor>
             </DesktopWrapper>
             <Decor $isEnd>
+              <PhotoWrapper>
+                <Image
+                  src={photo_1}
+                  alt="photo"
+                  width={270}
+                  height={380}
+                  priority={true}
+                />
+              </PhotoWrapper>
               <CursorWrapper>
                 <CursorIcon />
                 <CursorDecor>dima</CursorDecor>
