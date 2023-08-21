@@ -15,7 +15,7 @@ import {useDrawer} from '@/hooks/useDrawer';
 
 const poppins = Poppins({subsets: ['latin'], weight: ['400', '600', '700']});
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Web developer portfolio',
   description: 'Portfolio web developer from Sumy, Ukraine',
 };
