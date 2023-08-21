@@ -1,5 +1,12 @@
 const _bg = {
   primary: '#00060E',
+  secondary: '#ffffff',
+  tertiary: '#4D5055',
+  button: '#AD00FF',
+  blue: '#61A0FF',
+  green: '#00D722',
+  decor1: 'linear-gradient(135deg, #ee9ae5 0%, #5961f9 100%)',
+  decor2: 'linear-gradient(135deg, #FFF6B7 0%, #F6416C 100%)',
 };
 
 const _text = {
