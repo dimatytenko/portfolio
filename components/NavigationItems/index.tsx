@@ -1,21 +1,21 @@
 import React from 'react';
 import {usePathname} from 'next/navigation';
 
-import {Paths} from '@/constants/common';
+import {PATHS} from '@/constants/common';
 import {NavItem, StyledLink} from './styles';
 
 const navItems = [
   {
     title: 'about',
-    path: Paths.ABOUT,
+    path: PATHS.ABOUT,
   },
   {
     title: 'projects',
-    path: Paths.PROJECTS,
+    path: PATHS.PROJECTS,
   },
   {
     title: 'services',
-    path: Paths.SERVICES,
+    path: PATHS.SERVICES,
   },
 ];
 

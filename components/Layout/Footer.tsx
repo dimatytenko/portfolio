@@ -14,6 +14,7 @@ import {
   ArrowIcon,
 } from './styles';
 import {icon} from '@/ui-kit/Icon/Svg/types';
+import {LINKS} from '@/constants/common';
 
 const socialIcons: {
   type: icon;
@@ -21,11 +22,11 @@ const socialIcons: {
 }[] = [
   {
     type: 'github',
-    link: 'https://github.com/dimatytenko',
+    link: LINKS.GITHUB,
   },
   {
     type: 'linkedin',
-    link: 'https://www.linkedin.com/in/dima-tytenko-a5b26a21b/',
+    link: LINKS.LINKEDIN,
   },
 ];
 
@@ -45,22 +46,22 @@ export const Footer: React.FC = () => {
             ))}
           </SocialIcons>
           <FooterLinksWrapper>
-            <FooterLink href="tel: +380666812092">
+            <FooterLink href={`tel: ${LINKS.PHONE}`}>
               <TextBlockWrapper>
                 <FooterText>call me:</FooterText>
-                <FooterText>+380666812092</FooterText>
+                <FooterText>{LINKS.PHONE}</FooterText>
               </TextBlockWrapper>
             </FooterLink>
-            <FooterLink href="https://t.me/dimatytenko" target="_blank">
+            <FooterLink href={LINKS.TELEGRAM} target="_blank">
               <TextBlockWrapper>
                 <FooterText>telegram:</FooterText>
-                <FooterText>@dimatytenko</FooterText>
+                <FooterText>{`@${LINKS.TELEGRAM.split('/')[3]}`}</FooterText>
               </TextBlockWrapper>
             </FooterLink>
-            <FooterLink href="mailto: amgpetronass@gmail.com">
+            <FooterLink href={`mailto: ${LINKS.EMAIL}`}>
               <TextBlockWrapper>
-                <FooterText>Email:</FooterText>
-                <FooterText>amgpetronass@gmail.com</FooterText>
+                <FooterText>email:</FooterText>
+                <FooterText>{LINKS.EMAIL}</FooterText>
               </TextBlockWrapper>
             </FooterLink>
             <ArrowIcon />

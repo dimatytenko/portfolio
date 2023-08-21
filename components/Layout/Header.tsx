@@ -11,7 +11,7 @@ import {
   NavList,
   Menu,
 } from './styles';
-import {Paths} from '@/constants/common';
+import {PATHS} from '@/constants/common';
 import {NavigationItems} from '@/components/NavigationItems';
 
 interface IHeaderProps {
@@ -27,7 +27,7 @@ export const Header: React.FC<IHeaderProps> = ({
     <StyledHeader>
       <Container>
         <HeaderContent>
-          <Logo href={Paths.HOME} onClick={onCloseDrawer}>
+          <Logo href={PATHS.HOME} onClick={onCloseDrawer}>
             <LogoIcon />
           </Logo>
           <DesktopWrapper>
