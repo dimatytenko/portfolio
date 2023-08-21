@@ -1,5 +1,5 @@
 'use client';
-import type {Metadata} from 'next';
+
 import {Poppins} from 'next/font/google';
 import 'modern-normalize';
 import 'rc-drawer/assets/index.css';
@@ -14,11 +14,6 @@ import {Drawer} from '@/components/Drawer';
 import {useDrawer} from '@/hooks/useDrawer';
 
 const poppins = Poppins({subsets: ['latin'], weight: ['400', '600', '700']});
-
-export const metadata = {
-  title: 'Web developer portfolio',
-  description: 'Portfolio web developer from Sumy, Ukraine',
-};
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
   const {isOpen, toggleDrawer, closeHandler} = useDrawer();

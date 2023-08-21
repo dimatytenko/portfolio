@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import type {Metadata} from 'next';
 
 import {
   HomeWrapper,
@@ -25,6 +26,11 @@ import {
   MobileWrapper,
 } from './styles';
 import monitor from '@/assets/images/monitor.png';
+
+export const metadata: Metadata = {
+  title: 'Web developer portfolio',
+  description: 'Portfolio web developer from Sumy, Ukraine',
+};
 
 export default function Home() {
   return (
