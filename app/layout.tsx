@@ -12,6 +12,7 @@ import {Footer} from '@/components/Layout/Footer';
 import {Header} from '@/components/Layout/Header';
 import {Drawer} from '@/components/Drawer';
 import {useDrawer} from '@/hooks/useDrawer';
+import {ButtonToTop} from '@/components/ButtonScrollToTop';
 
 const poppins = Poppins({subsets: ['latin'], weight: ['400', '600', '700']});
 
@@ -32,6 +33,8 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
               <StyledMain>{children}</StyledMain>
               <Footer />
             </Wrapper>
+
+            <ButtonToTop />
             <Drawer
               onClickItem={closeHandler}
               open={isOpen}

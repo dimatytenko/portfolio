@@ -170,6 +170,46 @@ export const projects = [
     role: 'Developer',
   },
   {
+    imgSrc: '/img/projects/jadoo.jpg',
+    title: 'jadoo',
+    description:
+      'The website is built using HTML5 and SASS, and it follows an responsive design approach to ensure compatibility with various screen sizes.',
+    technology: 'HTML/SASS/JS',
+    technologies: ['HTML5', 'SASS', 'Responsive design', 'Swiper', 'Gulp'],
+    linkGithub: 'https://github.com/dimatytenko/Jadoo',
+    linkDemo: 'https://jadoos.netlify.app/',
+  },
+  {
+    imgSrc: '/img/projects/woodendot.jpg',
+    title: 'woodendot',
+    description:
+      'The website is built using HTML5 and SASS, and it follows an responsive design approach to ensure compatibility with various screen sizes.',
+    technology: 'HTML/SASS/JS',
+    technologies: ['HTML5', 'SASS', 'Responsive design', 'Swiper', 'Gulp'],
+    linkGithub: 'https://github.com/dimatytenko/Woodendot',
+    linkDemo: 'https://test-wodendot.netlify.app/',
+  },
+  {
+    imgSrc: '/img/projects/melanish.jpg',
+    title: 'melanish',
+    description:
+      'The website is built using HTML5 and SASS, and it follows an responsive design approach to ensure compatibility with various screen sizes.',
+    technology: 'HTML/SASS/JS',
+    technologies: ['HTML5', 'SASS', 'Responsive design', 'Swiper', 'Gulp'],
+    linkGithub: 'https://github.com/dimatytenko/Practice-Melanish',
+    linkDemo: 'https://melanish.netlify.app/',
+  },
+  {
+    imgSrc: '/img/projects/indicorp.jpg',
+    title: 'indicorp',
+    description:
+      'The website is built using HTML5 and SASS, and it follows an adaptive design approach to ensure compatibility with various screen sizes.',
+    technology: 'HTML/SASS',
+    technologies: ['HTML5', 'SASS', 'Adaptive design'],
+    linkGithub: 'https://github.com/dimatytenko/practice_Indicorp',
+    linkDemo: 'https://practice-indicorp.vercel.app/',
+  },
+  {
     imgSrc: '/img/projects/helleng.jpg',
     title: 'hell eng',
     description:
