@@ -37,10 +37,7 @@ export const Footer: React.FC = () => {
         <FooterContent>
           <SocialIcons>
             {socialIcons.map((icon) => (
-              <SocialIconWrapper
-                href={icon.link}
-                target="_blank"
-                key={icon.type}>
+              <SocialIconWrapper href={icon.link} key={icon.type}>
                 <SocialIcon type={icon.type} />
               </SocialIconWrapper>
             ))}
@@ -52,7 +49,7 @@ export const Footer: React.FC = () => {
                 <FooterText>{LINKS.PHONE}</FooterText>
               </TextBlockWrapper>
             </FooterLink>
-            <FooterLink href={LINKS.TELEGRAM} target="_blank">
+            <FooterLink href={LINKS.TELEGRAM}>
               <TextBlockWrapper>
                 <FooterText>telegram:</FooterText>
                 <FooterText>{`@${LINKS.TELEGRAM.split('/')[3]}`}</FooterText>

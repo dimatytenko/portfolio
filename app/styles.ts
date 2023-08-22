@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import {Media} from '@/ui-kit/theme/breakpoints';
 import {IconSvg} from '@/ui-kit/Icon/Svg';
+import {scrollStyles} from '@/ui-kit/theme/scroll';
 
 export const Wrapper = styled.div`
   display: flex;
@@ -47,6 +48,10 @@ export const DesktopWrapper = styled.div`
 // Home
 export const HomeWrapper = styled.section`
   padding-bottom: 40px;
+
+  ${Media.up.m} {
+    padding-top: 40px;
+  }
 `;
 
 export const HomeContent = styled.div`
@@ -86,19 +91,24 @@ export const SubTitle = styled.h2`
   color: ${({theme}) => theme.palette._text.tertiary};
 `;
 
-export const Button = styled.a`
+export const Button = styled.a.attrs({
+  target: '_blank',
+})<{type?: 'secondary'}>`
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
   padding: 18px 56px;
   border-radius: 40px;
-  background: ${({theme}) => theme.palette._bg.button};
+  background: ${({theme, type}) =>
+    type && type === 'secondary'
+      ? theme.palette._bg.linear_3
+      : theme.palette._bg.button};
   color: ${({theme}) => theme.palette._text.primary};
   text-transform: uppercase;
   font-size: 24px;
   opacity: 1;
-  transition: opacity, ${({theme}) => theme.transition.primary};
+  transition: opacity ${({theme}) => theme.transition.primary};
 
   &:hover {
     opacity: 0.8;
@@ -143,7 +153,7 @@ export const Decor = styled.div<{$isEnd?: boolean}>`
   flex-shrink: 0;
   border-radius: 190px 218px 20px 20px;
   background: ${({$isEnd, theme}) =>
-    $isEnd ? theme.palette._bg.decor1 : theme.palette._bg.decor2};
+    $isEnd ? theme.palette._bg.linear_1 : theme.palette._bg.linear_2};
 
   ${Media.down.xs} {
     width: 250px;
@@ -271,12 +281,119 @@ export const PhotoWrapper = styled.div`
   position: absolute;
   bottom: 0;
   left: 25px;
+`;
 
-  & > img {
-    // width: 376px;
-    // height: 380px;
+// ====================
+
+export const ProjectWrapper = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  max-width: 550px;
+  height: 700px;
+  border-radius: 50px 0px;
+  background: ${({theme}) => theme.palette._bg.dark};
+  box-shadow: 0px 0px 12px 0px ${({theme}) => theme.palette._bg.secondary};
+  padding: 25px 25px 45px;
+
+  ${Media.down.s} {
+    height: 790px;
+  }
+`;
+
+export const ProjectImageWrapper = styled.div`
+  border-radius: 8px;
+  overflow: hidden;
+`;
+
+export const ProjectContent = styled.div`
+  ${scrollStyles}
+  position: absolute;
+
+  // top: 0;
+  // height: 563px;
+
+  top: 300px;
+  left: 0;
+  height: 255px;
+  padding: 25px;
+  border-radius: 50px 0px 0px 0px;
+  overflow: hidden;
+  background: ${({theme}) => theme.palette._bg.dark};
+  transition: all ${({theme}) => theme.transition.primary};
+
+  &:hover,
+  &:focus {
+    top: 0;
+    box-shadow: 0px 0px 12px 0px ${({theme}) => theme.palette._bg.secondary};
+    width: 100%;
+    height: 563px;
+    z-index: 10;
+    overflow: auto;
+  }
+`;
+
+export const ProjectTitle = styled.h3`
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 25px;
+`;
+
+export const ProjectDevider = styled.div`
+  width: 300px;
+  height: 4px;
+  border-radius: 83px;
+  background: ${({theme}) => theme.palette._bg.linear_3};
+  margin: 0 auto 25px;
+
+  ${Media.down.m} {
+    width: 220px;
+  }
+`;
+
+export const ProjectTag = styled.p`
+  font-size: 28px;
+  font-weight: 600;
+`;
+
+export const ProjectDescription = styled.p`
+  font-size: 28px;
+`;
+
+export const ProjectButtons = styled.div`
+  display: flex;
+  gap: 25px;
+  width: 100%;
+  & > a {
+    width: 48%;
   }
 
   ${Media.down.s} {
+    flex-direction: column;
+    & > a {
+      width: 100%;
+      margin-top: unset;
+    }
   }
+`;
+
+export const ProjectTeamWrapper = styled.div`
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+`;
+
+export const TechnologiesWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+`;
+
+export const ProjectInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 `;

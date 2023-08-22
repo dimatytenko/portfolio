@@ -64,7 +64,7 @@ export default function Home() {
                 </ToolboxWrapper>
               </Decor>
             </MobileWrapper>
-            <Button href={LINKS.CV} target="_blank">
+            <Button href={LINKS.CV}>
               <CvIcon />
               cv
             </Button>

@@ -13,15 +13,7 @@ export const StyledHeader = styled.header`
 export const HeaderContent = styled.div`
   display: flex;
   align-items: center;
-  gap: 180px;
-
-  ${Media.down.l} {
-    gap: 100px;
-  }
-
-  ${Media.down.m} {
-    justify-content: space-between;
-  }
+  justify-content: space-between;
 `;
 
 export const Logo = styled(Link)`
