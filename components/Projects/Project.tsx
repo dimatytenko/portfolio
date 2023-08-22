@@ -6,15 +6,14 @@ import {
   ProjectContent,
   ProjectImageWrapper,
   ProjectTitle,
-  ProjectDevider,
   ProjectInfo,
   TechnologiesWrapper,
   ProjectTeamWrapper,
   ProjectTag,
   ProjectDescription,
   ProjectButtons,
-  Button,
-} from '@/app/styles';
+} from './styles';
+import {Button, Devider} from '@/app/styles';
 import {TProject} from '@/types/projects';
 
 interface IProjectProps {
@@ -35,7 +34,7 @@ export const Project: React.FC<IProjectProps> = ({project}) => {
       </ProjectImageWrapper>
       <ProjectContent>
         <ProjectTitle>{project.title}</ProjectTitle>
-        <ProjectDevider />
+        <Devider />
         <ProjectInfo>
           <ProjectTag>{project.technology}</ProjectTag>
           <ProjectDescription>{project.description}</ProjectDescription>
