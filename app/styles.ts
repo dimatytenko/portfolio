@@ -312,10 +312,6 @@ export const ProjectImageWrapper = styled.div`
 export const ProjectContent = styled.div`
   ${scrollStyles}
   position: absolute;
-
-  // top: 0;
-  // height: 563px;
-
   top: 300px;
   left: 0;
   height: 255px;
@@ -340,6 +336,7 @@ export const ProjectTitle = styled.h3`
   text-align: center;
   font-weight: 600;
   margin-bottom: 25px;
+  text-transform: uppercase;
 `;
 
 export const ProjectDevider = styled.div`
@@ -357,10 +354,15 @@ export const ProjectDevider = styled.div`
 export const ProjectTag = styled.p`
   font-size: 28px;
   font-weight: 600;
+  background: ${({theme}) => theme.palette._text.modifier};
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 `;
 
 export const ProjectDescription = styled.p`
-  font-size: 28px;
+  font-size: 24px;
+  line-height: 1.2;
 `;
 
 export const ProjectButtons = styled.div`

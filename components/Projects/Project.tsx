@@ -39,9 +39,13 @@ export const Project: React.FC<IProjectProps> = ({project}) => {
         <ProjectInfo>
           <ProjectTag>{project.technology}</ProjectTag>
           <ProjectDescription>{project.description}</ProjectDescription>
+          <ProjectTag>Technologies:</ProjectTag>
           <TechnologiesWrapper>
-            {project.technologies.map((tech) => (
-              <ProjectDescription key={tech}>{tech}</ProjectDescription>
+            {project.technologies.map((tech, i) => (
+              <ProjectDescription key={tech}>
+                {tech}
+                {i === project.technologies.length - 1 ? ';' : ','}
+              </ProjectDescription>
             ))}
           </TechnologiesWrapper>
           {project.team && (

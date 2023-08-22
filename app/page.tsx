@@ -26,8 +26,8 @@ import {
   DesktopWrapper,
   MobileWrapper,
 } from './styles';
-import monitor from '@/assets/images/monitor.png';
-import photo_1 from '@/assets/images/photo_1.png';
+import monitor from '@/public/img/static/monitor.png';
+import photo_1 from '@/public/img/static/photo_1.png';
 import {LINKS} from '@/constants/common';
 
 export const metadata: Metadata = {
