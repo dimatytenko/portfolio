@@ -32,5 +32,15 @@
     "team": "team",
     "role": "role",
     "developers": "developers"
+  },
+  "meta": {
+    "title": "Dmytro Tytenko - Portfolio ⭐ Front-end Developer ⭐ Sumy, ⚡Ukraine⚡",
+    "titleAbout": "Dmytro Tytenko - About ⭐ Front-end Developer ⭐ Sumy, ⚡Ukraine⚡",
+    "titleProjects": "Dmytro Tytenko - Projects ⭐ Front-end Developer ⭐ Sumy, ⚡Ukraine⚡",
+    "titleServices": "Tytenko Dmytro - Front-end Developer technologies Sumy, Ukraine",
+    "description": "Web developer 【Dmytro Tytenko】 ➨ Creation of turnkey sites of any complexity ✔️ high quality and a wide range of services ✔️ ➨ Portfolio of sites in Sumy ☎",
+    "descriptionAbout": "Information about me. Web developer 【Dmytro Tytenko】 ➨ Creation of turnkey sites of any complexity ✔️ high quality and a wide range of services ✔️ ➨ Portfolio of sites in Sumy ☎",
+    "descriptionProjects": "My projects. Web developer 【Dmytro Tytenko】 ➨ Creation of turnkey sites of any complexity ✔️ high quality and a wide range of services ✔️ ➨ Portfolio of sites in Sumy ☎",
+    "descriptionServices": "The technologies I use. Web developer 【Dmytro Tytenko】 ➨ Creation of turnkey sites of any complexity ✔️ high quality and a wide range of services ✔️ ➨ Portfolio of sites in Sumy ☎"
   }
 }

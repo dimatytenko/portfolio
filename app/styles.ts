@@ -8,7 +8,7 @@ export const StyledBody = styled.body`
   background-color: ${({theme}) => theme.palette._bg.primary};
   color: ${({theme}) => theme.palette._text.primary};
   font-size: 36px;
-  line-height: 1;
+  line-height: 1.2;
 `;
 
 export const Container = styled.div`

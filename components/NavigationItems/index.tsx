@@ -41,7 +41,7 @@ export const NavigationItems: React.FC<INavigationItemsProps> = ({
           href={item.path(lang)}
           key={item.title}
           onClick={onClickItem}>
-          <NavItem $isPath={pathname === item.path('ua')}>
+          <NavItem $isPath={pathname === item.path(lang)}>
             {dictionary['header'][item.title]}
           </NavItem>
         </StyledLink>

@@ -113,7 +113,15 @@ export default async function Home({params: {lang}}: {params: {lang: Locale}}) {
   );
 }
 
-export const metadata: Metadata = {
-  title: 'Web developer portfolio',
-  description: 'Portfolio web developer from Sumy, Ukraine',
-};
+export async function generateMetadata({
+  params: {lang},
+}: {
+  params: {lang: Locale};
+}): Promise<Metadata> {
+  const dictionary = await getDictionary(lang);
+
+  return {
+    title: dictionary['meta'].title,
+    description: dictionary['meta'].description,
+  };
+}

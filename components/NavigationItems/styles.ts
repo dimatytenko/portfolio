@@ -2,6 +2,8 @@
 import styled from 'styled-components';
 import Link from 'next/link';
 
+import {Media} from '@/ui-kit/theme/breakpoints';
+
 export const NavItem = styled.div<{$isPath?: boolean}>`
   color: ${({theme}) => theme.palette._text.secondary};
   text-transform: capitalize;
@@ -16,6 +18,10 @@ export const NavItem = styled.div<{$isPath?: boolean}>`
   &:focus {
     color: ${({theme}) => theme.palette._text.primary};
     border-color: ${({theme}) => theme.palette._text.primary};
+  }
+
+  ${Media.down.l} {
+    font-size: 28px;
   }
 `;
 

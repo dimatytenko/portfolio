@@ -33,7 +33,15 @@ export default async function About({
   );
 }
 
-export const metadata: Metadata = {
-  title: 'Portfolio | About',
-  description: 'About me',
-};
+export async function generateMetadata({
+  params: {lang},
+}: {
+  params: {lang: Locale};
+}): Promise<Metadata> {
+  const dictionary = await getDictionary(lang);
+
+  return {
+    title: dictionary['meta'].titleAbout,
+    description: dictionary['meta'].descriptionAbout,
+  };
+}

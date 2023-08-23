@@ -54,7 +54,7 @@ export const NavList = styled.div`
   gap: 60px;
 
   ${Media.down.l} {
-    gap: 40px;
+    gap: 20px;
   }
 `;
 

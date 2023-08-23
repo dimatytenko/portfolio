@@ -5,7 +5,7 @@ export type TProject = {
   title: string;
   description: {
     en: string;
-    ua: string;
+    uk: string;
   };
   technology: string;
   technologies: string[];

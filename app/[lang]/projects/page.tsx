@@ -28,7 +28,15 @@ export default async function Projects({
   );
 }
 
-export const metadata: Metadata = {
-  title: 'Portfolio | Projects',
-  description: 'List of the web projects',
-};
+export async function generateMetadata({
+  params: {lang},
+}: {
+  params: {lang: Locale};
+}): Promise<Metadata> {
+  const dictionary = await getDictionary(lang);
+
+  return {
+    title: dictionary['meta'].titleProjects,
+    description: dictionary['meta'].descriptionProjects,
+  };
+}

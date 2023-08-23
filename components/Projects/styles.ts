@@ -40,7 +40,7 @@ export const ProjectContent = styled.div`
   position: absolute;
   top: 300px;
   left: 0;
-  height: 255px;
+  height: 268px;
   padding: 25px;
   border-radius: 50px 0px 0px 0px;
   overflow: hidden;

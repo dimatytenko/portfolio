@@ -32,7 +32,15 @@ export default async function Services({
   );
 }
 
-export const metadata: Metadata = {
-  title: 'Portfolio | Services',
-  description: 'Services',
-};
+export async function generateMetadata({
+  params: {lang},
+}: {
+  params: {lang: Locale};
+}): Promise<Metadata> {
+  const dictionary = await getDictionary(lang);
+
+  return {
+    title: dictionary['meta'].titleServices,
+    description: dictionary['meta'].descriptionServices,
+  };
+}
