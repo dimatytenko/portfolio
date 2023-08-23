@@ -10,16 +10,20 @@ import {
 } from './styles';
 import {TService} from '@/types/services';
 import {icon} from '@/ui-kit/Icon/Svg/types';
+import {TDictionary} from '@/types/locale';
 
 interface IServiceProps {
   data: TService;
+  dictionary: TDictionary;
 }
 
-export const Service: React.FC<IServiceProps> = ({data}) => {
+export const Service: React.FC<IServiceProps> = ({data, dictionary}) => {
   return (
     <ServiceWrapper>
       <ServiceIsUse $isUse={data.is}>
-        {data.is ? 'Use' : 'In progress'}
+        {data.is
+          ? dictionary['services'].use
+          : dictionary['services'].inProgres}
       </ServiceIsUse>
       <StyledIcon
         type={data.tag as icon}

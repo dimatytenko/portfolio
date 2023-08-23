@@ -1,0 +1,36 @@
+{
+  "home": {
+    "name": "dima",
+    "titleBeforeName": "Hi There! I am ",
+    "titleAfterName": ", WEB Developer.",
+    "subTitle": "I am coding everyday and I love it.",
+    "cv": "cv"
+  },
+  "header": {
+    "about": "about",
+    "projects": "projects",
+    "services": "services"
+  },
+  "footer": {
+    "call": "call me",
+    "telegram": "telegram",
+    "email": "email"
+  },
+  "about": {
+    "name": "Tytenko Dmytro",
+    "position": "Front-end Developer",
+    "description": "Hello! I am a front-end developer with two years of experience. I create web and mobile applications, putting my passion into every project. My goal is to provide a great user experience through excellence and innovation."
+  },
+  "services": {
+    "use": "Use",
+    "inProgres": "In progress"
+  },
+  "projects": {
+    "demo": "demo",
+    "repo": "repo",
+    "technologies": "technologies",
+    "team": "team",
+    "role": "role",
+    "developers": "developers"
+  }
+}

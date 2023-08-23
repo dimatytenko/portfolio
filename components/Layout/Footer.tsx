@@ -15,6 +15,7 @@ import {
 } from './styles';
 import {icon} from '@/ui-kit/Icon/Svg/types';
 import {LINKS} from '@/constants/common';
+import {TDictionary} from '@/types/locale';
 
 const socialIcons: {
   type: icon;
@@ -30,7 +31,11 @@ const socialIcons: {
   },
 ];
 
-export const Footer: React.FC = () => {
+interface IFooterProps {
+  dictionary: TDictionary;
+}
+
+export const Footer: React.FC<IFooterProps> = ({dictionary}) => {
   return (
     <StyledFooter>
       <Container>
@@ -45,19 +50,19 @@ export const Footer: React.FC = () => {
           <FooterLinksWrapper>
             <FooterLink href={`tel: ${LINKS.PHONE}`}>
               <TextBlockWrapper>
-                <FooterText>call me:</FooterText>
+                <FooterText>{dictionary['footer'].call}:</FooterText>
                 <FooterText>{LINKS.PHONE}</FooterText>
               </TextBlockWrapper>
             </FooterLink>
             <FooterLink href={LINKS.TELEGRAM}>
               <TextBlockWrapper>
-                <FooterText>telegram:</FooterText>
+                <FooterText>{dictionary['footer'].telegram}:</FooterText>
                 <FooterText>{`@${LINKS.TELEGRAM.split('/')[3]}`}</FooterText>
               </TextBlockWrapper>
             </FooterLink>
             <FooterLink href={`mailto: ${LINKS.EMAIL}`}>
               <TextBlockWrapper>
-                <FooterText>email:</FooterText>
+                <FooterText>{dictionary['footer'].email}:</FooterText>
                 <FooterText>{LINKS.EMAIL}</FooterText>
               </TextBlockWrapper>
             </FooterLink>

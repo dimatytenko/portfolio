@@ -5,6 +5,16 @@ import Link from 'next/link';
 import {IconSvg} from '@/ui-kit/Icon/Svg';
 import {Media} from '@/ui-kit/theme/breakpoints';
 
+export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+`;
+
+export const StyledMain = styled.main`
+  flex: 1 1 auto;
+`;
+
 export const StyledHeader = styled.header`
   padding-top: 30px;
   padding-bottom: 30px;
@@ -51,6 +61,12 @@ export const NavList = styled.div`
 export const Menu = styled.div`
   position: relative;
   z-index: 9999;
+`;
+
+export const ElementsWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 40px;
 `;
 
 // Footer

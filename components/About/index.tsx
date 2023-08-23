@@ -3,18 +3,21 @@ import React from 'react';
 import {TAbout} from '@/types/about';
 import {AboutWrapper, Title, Position, Description} from './styles';
 import {Devider} from '@/app/styles';
+import {TDictionary} from '@/types/locale';
 
 interface IAboutComponentProps {
-  data: TAbout;
+  dictionary: TDictionary;
 }
 
-export const AboutComponent: React.FC<IAboutComponentProps> = ({data}) => {
+export const AboutComponent: React.FC<IAboutComponentProps> = ({
+  dictionary,
+}) => {
   return (
     <AboutWrapper>
-      <Title>{data.name}</Title>
+      <Title>{dictionary['about'].name}</Title>
       <Devider />
-      <Position>{data.position}</Position>
-      <Description>{data.description}</Description>
+      <Position>{dictionary['about'].position}</Position>
+      <Description>{dictionary['about'].description}</Description>
     </AboutWrapper>
   );
 };

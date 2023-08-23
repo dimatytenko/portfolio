@@ -4,21 +4,11 @@ import styled from 'styled-components';
 import {Media} from '@/ui-kit/theme/breakpoints';
 import {IconSvg} from '@/ui-kit/Icon/Svg';
 
-export const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-`;
-
 export const StyledBody = styled.body`
   background-color: ${({theme}) => theme.palette._bg.primary};
   color: ${({theme}) => theme.palette._text.primary};
   font-size: 36px;
   line-height: 1;
-`;
-
-export const StyledMain = styled.main`
-  flex: 1 1 auto;
 `;
 
 export const Container = styled.div`
@@ -74,6 +64,7 @@ export const Title = styled.h1`
   font-size: clamp(40px, 8vw, 90px);
   font-weight: 700;
   margin-bottom: 40px;
+  line-height: 1.2;
 `;
 
 export const TitleModifyre = styled.span`
@@ -81,6 +72,7 @@ export const TitleModifyre = styled.span`
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-transform: capitalize;
 `;
 
 export const SubTitle = styled.h2`
@@ -88,6 +80,7 @@ export const SubTitle = styled.h2`
   font-size: 24px;
   margin-bottom: 60px;
   color: ${({theme}) => theme.palette._text.tertiary};
+  line-height: 1.2;
 `;
 
 export const Button = styled.a.attrs({

@@ -25,26 +25,27 @@ import {
   PhotoWrapper,
   DesktopWrapper,
   MobileWrapper,
-} from './styles';
+} from '@/app/styles';
 import monitor from '@/public/img/static/monitor.png';
 import photo_1 from '@/public/img/static/photo_1.png';
 import {LINKS} from '@/constants/common';
+import {getDictionary} from '@/get-dictionary';
+import {Locale} from '@/i18n-config';
 
-export const metadata: Metadata = {
-  title: 'Web developer portfolio',
-  description: 'Portfolio web developer from Sumy, Ukraine',
-};
+export default async function Home({params: {lang}}: {params: {lang: Locale}}) {
+  const dictionary = await getDictionary(lang);
 
-export default function Home() {
   return (
     <HomeWrapper>
       <Container>
         <HomeContent>
           <LeftSide>
             <Title>
-              Hi There! I am <TitleModifyre>Dima</TitleModifyre>, WEB Developer.
+              {dictionary['home'].titleBeforeName}
+              <TitleModifyre>{dictionary['home'].name}</TitleModifyre>
+              {dictionary['home'].titleAfterName}
             </Title>
-            <SubTitle>I am coding everyday and I love it.</SubTitle>
+            <SubTitle>{dictionary['home'].subTitle}</SubTitle>
             <MobileWrapper>
               <Decor>
                 <ImageWrapper>
@@ -66,7 +67,7 @@ export default function Home() {
             </MobileWrapper>
             <Button href={LINKS.CV}>
               <CvIcon />
-              cv
+              {dictionary['home'].cv}
             </Button>
           </LeftSide>
           <RightSide>
@@ -102,7 +103,7 @@ export default function Home() {
               </PhotoWrapper>
               <CursorWrapper>
                 <CursorIcon />
-                <CursorDecor>dima</CursorDecor>
+                <CursorDecor>{dictionary['home'].name}</CursorDecor>
               </CursorWrapper>
             </Decor>
           </RightSide>
@@ -111,3 +112,8 @@ export default function Home() {
     </HomeWrapper>
   );
 }
+
+export const metadata: Metadata = {
+  title: 'Web developer portfolio',
+  description: 'Portfolio web developer from Sumy, Ukraine',
+};

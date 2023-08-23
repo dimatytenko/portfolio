@@ -3,7 +3,10 @@ import {type} from 'os';
 export type TProject = {
   imgSrc: string;
   title: string;
-  description: string;
+  description: {
+    en: string;
+    ua: string;
+  };
   technology: string;
   technologies: string[];
   linkGithub: string;

@@ -15,12 +15,20 @@ import {
 } from './styles';
 import {Button, Devider} from '@/app/styles';
 import {TProject} from '@/types/projects';
+import {TDictionary} from '@/types/locale';
+import {Locale} from '@/i18n-config';
 
 interface IProjectProps {
   project: TProject;
+  dictionary: TDictionary;
+  lang: Locale;
 }
 
-export const Project: React.FC<IProjectProps> = ({project}) => {
+export const Project: React.FC<IProjectProps> = ({
+  project,
+  dictionary,
+  lang,
+}) => {
   return (
     <ProjectWrapper>
       <ProjectImageWrapper>
@@ -37,8 +45,8 @@ export const Project: React.FC<IProjectProps> = ({project}) => {
         <Devider />
         <ProjectInfo>
           <ProjectTag>{project.technology}</ProjectTag>
-          <ProjectDescription>{project.description}</ProjectDescription>
-          <ProjectTag>Technologies:</ProjectTag>
+          <ProjectDescription>{project.description[lang]}</ProjectDescription>
+          <ProjectTag>{dictionary['projects'].technologies}:</ProjectTag>
           <TechnologiesWrapper>
             {project.technologies.map((tech, i) => (
               <ProjectDescription key={tech}>
@@ -50,13 +58,13 @@ export const Project: React.FC<IProjectProps> = ({project}) => {
           {project.team && (
             <>
               <ProjectTeamWrapper>
-                <ProjectTag>Team:</ProjectTag>
+                <ProjectTag>{dictionary['projects'].team}:</ProjectTag>
                 <ProjectDescription>
-                  {project.countTeam} developers
+                  {project.countTeam} {dictionary['projects'].developers}
                 </ProjectDescription>
               </ProjectTeamWrapper>
               <ProjectTeamWrapper>
-                <ProjectTag>Role:</ProjectTag>
+                <ProjectTag>{dictionary['projects'].role}:</ProjectTag>
                 <ProjectDescription>{project.role}</ProjectDescription>
               </ProjectTeamWrapper>
             </>
@@ -64,9 +72,9 @@ export const Project: React.FC<IProjectProps> = ({project}) => {
         </ProjectInfo>
       </ProjectContent>
       <ProjectButtons>
-        <Button href={project.linkDemo}>demo</Button>
+        <Button href={project.linkDemo}>{dictionary['projects'].demo}</Button>
         <Button href={project.linkGithub} type={'secondary'}>
-          repo
+          {dictionary['projects'].repo}
         </Button>
       </ProjectButtons>
     </ProjectWrapper>

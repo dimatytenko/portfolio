@@ -1,0 +1,49 @@
+import {Poppins} from 'next/font/google';
+import 'modern-normalize';
+import 'rc-drawer/assets/index.css';
+import type {Metadata} from 'next';
+
+import '@/app/globals.css';
+import {RootStyleRegistry} from '@/app/rootStyleRegistry';
+import {ThemeWrapper} from '@/app/themeWrapper';
+import {StyledBody} from '@/app/styles';
+
+import {i18n} from '@/i18n-config';
+import {Locale} from '@/i18n-config';
+import {getDictionary} from '@/get-dictionary';
+import {Layout} from '@/components/Layout';
+
+const poppins = Poppins({subsets: ['latin'], weight: ['400', '600', '700']});
+
+export async function generateStaticParams() {
+  return i18n.locales.map((locale) => ({lang: locale}));
+}
+
+export default async function RootLayout({
+  children,
+  params: {lang},
+}: {
+  children: React.ReactNode;
+  params: {lang: Locale};
+}) {
+  const dictionary = await getDictionary(lang);
+
+  return (
+    <html lang={lang}>
+      <ThemeWrapper>
+        <RootStyleRegistry>
+          <StyledBody className={poppins.className}>
+            <Layout dictionary={dictionary} lang={lang}>
+              {children}
+            </Layout>
+          </StyledBody>
+        </RootStyleRegistry>
+      </ThemeWrapper>
+    </html>
+  );
+}
+
+export const metadata: Metadata = {
+  title: 'Web developer portfolio',
+  description: 'Portfolio web developer from Sumy, Ukraine',
+};

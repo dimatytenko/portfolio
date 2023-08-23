@@ -1,9 +1,11 @@
-export enum PATHS {
-  HOME = '/',
-  ABOUT = '/about',
-  PROJECTS = '/projects',
-  SERVICES = '/services',
-}
+import {Locale} from '@/i18n-config';
+
+export const getPath = {
+  home: (lang: Locale) => `/${lang}/`,
+  about: (lang: Locale) => `/${lang}/about`,
+  projects: (lang: Locale) => `/${lang}/projects`,
+  services: (lang: Locale) => `/${lang}/services`,
+};
 
 export enum LINKS {
   GITHUB = 'https://github.com/dimatytenko',
