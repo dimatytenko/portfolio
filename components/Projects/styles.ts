@@ -56,6 +56,11 @@ export const ProjectContent = styled.div`
     z-index: 10;
     overflow: auto;
   }
+
+  ${Media.down.xs} {
+    top: 200px;
+    height: 350px;
+  }
 `;
 
 export const ProjectTitle = styled.h3`
