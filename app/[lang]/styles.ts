@@ -5,14 +5,8 @@ import Link from 'next/link';
 import {Media} from '@/ui-kit/theme/breakpoints';
 import {IconSvg} from '@/ui-kit/Icon/Svg';
 
-export const StyledBody = styled.body<{$isNotFound?: boolean}>`
+export const StyledBody = styled.body`
   width: 100%;
-  background-image: ${({$isNotFound}) =>
-    $isNotFound && 'url(/img/static/not_found_bg.png)'};
-  background-repeat: no-repeat;
-  background-position: top right;
-  background-size: auto 100%;
-  background-color: ${({theme}) => theme.palette._bg.primary};
   color: ${({theme}) => theme.palette._text.primary};
   font-size: 36px;
   line-height: 1.2;
@@ -326,7 +320,7 @@ export const NotFoundSubTitle = styled.h3`
 export const NotFoundDescription = styled.p`
   font-size: 32px;
   font-weight: 500;
-  margin-bottom: 150px;
+  margin-bottom: 60px;
 `;
 
 export const NotFoundButton = styled(Link)`

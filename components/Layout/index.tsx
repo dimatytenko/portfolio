@@ -32,10 +32,9 @@ export const Layout: React.FC<ILayoutProps> = ({
   const pathname = usePathname();
 
   return (
-    <StyledBody
-      className={font.className}
-      $isNotFound={!Paths.includes(pathname.split('/').slice(2).join('/'))}>
-      <Wrapper>
+    <StyledBody className={font.className}>
+      <Wrapper
+        $isNotFound={!Paths.includes(pathname.split('/').slice(2).join('/'))}>
         <Header
           isOpen={isOpen}
           toggleDrawer={toggleDrawer}

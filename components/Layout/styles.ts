@@ -5,7 +5,13 @@ import Link from 'next/link';
 import {IconSvg} from '@/ui-kit/Icon/Svg';
 import {Media} from '@/ui-kit/theme/breakpoints';
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.div<{$isNotFound?: boolean}>`
+  background-image: ${({$isNotFound}) =>
+    $isNotFound && 'url(/img/static/not_found_bg.png)'};
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: auto 100%;
+  background-color: ${({theme}) => theme.palette._bg.primary};
   display: flex;
   flex-direction: column;
   min-height: 100%;
