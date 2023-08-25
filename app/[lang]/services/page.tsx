@@ -1,6 +1,6 @@
 import type {Metadata} from 'next';
 
-import {Container} from '@/app/styles';
+import {Container} from '@/app/[lang]/styles';
 import {ServicePage, ServiceContent} from './styles';
 import {Service} from '@/components/Service';
 import {services} from '@/public/data/services';

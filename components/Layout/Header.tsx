@@ -3,7 +3,7 @@
 import React from 'react';
 import {Sling as Hamburger} from 'hamburger-react';
 
-import {Container, DesktopWrapper, MobileWrapper} from '@/app/styles';
+import {Container, DesktopWrapper, MobileWrapper} from '@/app/[lang]/styles';
 import {
   StyledHeader,
   HeaderContent,

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {Container} from '@/app/styles';
+import {Container} from '@/app/[lang]/styles';
 import {
   StyledFooter,
   FooterContent,

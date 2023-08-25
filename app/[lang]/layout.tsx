@@ -6,7 +6,6 @@ import type {Metadata} from 'next';
 import '@/app/globals.css';
 import {RootStyleRegistry} from '@/app/rootStyleRegistry';
 import {ThemeWrapper} from '@/app/themeWrapper';
-import {StyledBody} from '@/app/styles';
 
 import {i18n} from '@/i18n-config';
 import {Locale} from '@/i18n-config';
@@ -32,11 +31,9 @@ export default async function RootLayout({
     <html lang={lang}>
       <ThemeWrapper>
         <RootStyleRegistry>
-          <StyledBody className={poppins.className}>
-            <Layout dictionary={dictionary} lang={lang}>
+            <Layout font={poppins} dictionary={dictionary} lang={lang}>
               {children}
             </Layout>
-          </StyledBody>
         </RootStyleRegistry>
       </ThemeWrapper>
     </html>

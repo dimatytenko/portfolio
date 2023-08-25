@@ -2,7 +2,7 @@ import React from 'react';
 
 import {TAbout} from '@/types/about';
 import {AboutWrapper, Title, Position, Description} from './styles';
-import {Devider} from '@/app/styles';
+import {Devider} from '@/app/[lang]/styles';
 import {TDictionary} from '@/types/locale';
 
 interface IAboutComponentProps {

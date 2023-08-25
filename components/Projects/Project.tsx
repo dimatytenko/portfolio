@@ -13,7 +13,7 @@ import {
   ProjectDescription,
   ProjectButtons,
 } from './styles';
-import {Button, Devider} from '@/app/styles';
+import {Button, Devider} from '@/app/[lang]/styles';
 import {TProject} from '@/types/projects';
 import {TDictionary} from '@/types/locale';
 import {Locale} from '@/i18n-config';

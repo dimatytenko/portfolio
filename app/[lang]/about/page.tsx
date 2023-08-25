@@ -1,6 +1,6 @@
 import type {Metadata} from 'next';
 
-import {Container} from '@/app/styles';
+import {Container} from '@/app/[lang]/styles';
 import {AboutPage, AboutContent, AvatarWrapper} from './styles';
 import {Avatar} from '@/components/Avatar';
 import {AboutComponent} from '@/components/About';

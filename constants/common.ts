@@ -1,5 +1,7 @@
 import {Locale} from '@/i18n-config';
 
+export const Paths = ['', 'about', 'projects', 'services'];
+
 export const getPath = {
   home: (lang: Locale) => `/${lang}/`,
   about: (lang: Locale) => `/${lang}/about`,

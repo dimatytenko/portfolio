@@ -1,10 +1,17 @@
 'use client';
 import styled from 'styled-components';
+import Link from 'next/link';
 
 import {Media} from '@/ui-kit/theme/breakpoints';
 import {IconSvg} from '@/ui-kit/Icon/Svg';
 
-export const StyledBody = styled.body`
+export const StyledBody = styled.body<{$isNotFound?: boolean}>`
+  width: 100%;
+  background-image: ${({$isNotFound}) =>
+    $isNotFound && 'url(/img/static/not_found_bg.png)'};
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: auto 100%;
   background-color: ${({theme}) => theme.palette._bg.primary};
   color: ${({theme}) => theme.palette._text.primary};
   font-size: 36px;
@@ -285,4 +292,46 @@ export const Devider = styled.div`
   ${Media.down.m} {
     width: 220px;
   }
+`;
+
+// Not Found
+export const NotFoundWrapper = styled.section`
+  padding-top: 40px;
+  padding-bottom: 40px;
+`;
+
+export const NotFoundContent = styled.div`
+  max-width: 50%;
+
+  ${Media.down.m} {
+    max-width: 100%;
+  }
+`;
+
+export const NotFoundTitle = styled.h2`
+  font-size: 200px;
+  font-weight: 700;
+
+  ${Media.down.m} {
+    font-size: 140px;
+  }
+`;
+
+export const NotFoundSubTitle = styled.h3`
+  font-size: 57px;
+  font-weight: 600;
+  margin-bottom: 40px;
+`;
+
+export const NotFoundDescription = styled.p`
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 150px;
+`;
+
+export const NotFoundButton = styled(Link)`
+  background: ${({theme}) => theme.palette._text.modifier};
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 `;

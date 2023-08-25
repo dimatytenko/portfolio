@@ -1,7 +1,7 @@
 import type {Metadata} from 'next';
 
 import {ProjectsList} from '@/components/Projects';
-import {Container} from '@/app/styles';
+import {Container} from '@/app/[lang]/styles';
 import {ProjectPage} from './styles';
 import {projects} from '@/public/data/projects';
 import {getDictionary} from '@/get-dictionary';

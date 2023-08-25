@@ -25,7 +25,7 @@ import {
   PhotoWrapper,
   DesktopWrapper,
   MobileWrapper,
-} from '@/app/styles';
+} from '@/app/[lang]/styles';
 import monitor from '@/public/img/static/monitor.png';
 import photo_1 from '@/public/img/static/photo_1.png';
 import {LINKS} from '@/constants/common';
