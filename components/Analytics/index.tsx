@@ -17,8 +17,6 @@ export default function Analytics() {
   }, [pathname, searchParams]);
 
   if (process.env.NEXT_PUBLIC_VERCEL_ENV !== 'production') {
-    console.log(process.env.NEXT_PUBLIC_VERCEL_ENV);
-    console.log(process.env.NEXT_PUBLIC_VERCEL_ENV !== 'production');
     return null;
   }
 
