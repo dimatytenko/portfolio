@@ -3,6 +3,7 @@
 import React from 'react';
 import {NextFont} from 'next/dist/compiled/@next/font';
 import {usePathname} from 'next/navigation';
+import {Suspense} from 'react';
 
 import {StyledBody} from '@/app/[lang]/styles';
 import {Footer} from '@/components/Layout/Footer';
@@ -14,6 +15,7 @@ import {TDictionary} from '@/types/locale';
 import {useDrawer} from '@/hooks/useDrawer';
 import {Locale} from '@/i18n-config';
 import {Paths} from '@/constants/common';
+import Analytics from '@/components/Analytics';
 
 interface ILayoutProps {
   font: NextFont;
@@ -33,6 +35,9 @@ export const Layout: React.FC<ILayoutProps> = ({
 
   return (
     <StyledBody className={font.className}>
+      <Suspense>
+        <Analytics />;
+      </Suspense>
       <Wrapper
         $isNotFound={!Paths.includes(pathname.split('/').slice(2).join('/'))}>
         <Header

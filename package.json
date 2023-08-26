@@ -14,6 +14,7 @@
     "@types/node": "20.5.0",
     "@types/react": "18.2.20",
     "@types/react-dom": "18.2.7",
+    "client-only": "^0.0.1",
     "eslint": "8.47.0",
     "eslint-config-next": "13.4.18",
     "hamburger-react": "^2.5.0",
@@ -28,6 +29,7 @@
     "typescript": "5.1.6"
   },
   "devDependencies": {
+    "@types/gtag.js": "^0.0.13",
     "@types/negotiator": "^0.6.1",
     "@types/styled-components": "^5.1.26"
   }

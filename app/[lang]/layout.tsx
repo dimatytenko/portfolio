@@ -6,11 +6,11 @@ import type {Metadata} from 'next';
 import '@/app/globals.css';
 import {RootStyleRegistry} from '@/app/rootStyleRegistry';
 import {ThemeWrapper} from '@/app/themeWrapper';
-
 import {i18n} from '@/i18n-config';
 import {Locale} from '@/i18n-config';
 import {getDictionary} from '@/get-dictionary';
 import {Layout} from '@/components/Layout';
+import GoogleAnalytics from '@/components/Analytics/GoogleAnalytics';
 
 const poppins = Poppins({subsets: ['latin'], weight: ['400', '600', '700']});
 
@@ -29,11 +29,12 @@ export default async function RootLayout({
 
   return (
     <html lang={lang}>
+      <GoogleAnalytics />
       <ThemeWrapper>
         <RootStyleRegistry>
-            <Layout font={poppins} dictionary={dictionary} lang={lang}>
-              {children}
-            </Layout>
+          <Layout font={poppins} dictionary={dictionary} lang={lang}>
+            {children}
+          </Layout>
         </RootStyleRegistry>
       </ThemeWrapper>
     </html>
