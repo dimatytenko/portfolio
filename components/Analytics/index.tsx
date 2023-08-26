@@ -16,12 +16,13 @@ export default function Analytics() {
     }
   }, [pathname, searchParams]);
 
-  console.log(process.env.NEXT_PUBLIC_VERCEL_ENV);
-  console.log(process.env.NEXT_PUBLIC_VERCEL_ENV !== 'production');
-  // if (process.env.NEXT_PUBLIC_VERCEL_ENV !== 'production') {
-  //   return null;
-  // }
+  if (process.env.NEXT_PUBLIC_VERCEL_ENV !== 'production') {
+    console.log(process.env.NEXT_PUBLIC_VERCEL_ENV);
+    console.log(process.env.NEXT_PUBLIC_VERCEL_ENV !== 'production');
+    return null;
+  }
 
+  console.log('GTM_ID', GTM_ID);
   return (
     <>
       <noscript>
