@@ -12,7 +12,8 @@ export default function CookieBanner() {
 
   useEffect(() => {
     const cookieConsent = getLocalStorage('cookie_consent');
-    if (!cookieConsent) {
+    console.log('cookieConsent', cookieConsent);
+    if (cookieConsent === undefined) {
       setCookieConsent(null);
       return;
     }
@@ -20,11 +21,11 @@ export default function CookieBanner() {
   }, []);
 
   useEffect(() => {
-    if (!cookieConsent || cookieConsent === null) return;
+    if (typeof cookieConsent !== 'boolean') return;
     window.gtag('consent', 'update', {
       analytics_storage: cookieConsent ? 'granted' : 'denied',
     });
-
+    console.log('cookieConsent', cookieConsent);
     setLocalStorage('cookie_consent', cookieConsent);
 
     //For Testing
