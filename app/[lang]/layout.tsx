@@ -13,6 +13,7 @@ import {getDictionary} from '@/get-dictionary';
 import {Layout} from '@/components/Layout';
 import GoogleAnalytics from '@/components/Analytics/GoogleAnalytics';
 import {Suspense} from 'react';
+import {GA_MEASUREMENT_ID} from '@/constants/common';
 
 const poppins = Poppins({subsets: ['latin'], weight: ['400', '600', '700']});
 
@@ -37,7 +38,7 @@ export default async function RootLayout({
         content="SSU-yyXlydZ6CU4gAJSn-zhdB2X_JVXU0MoBwhztF1g"
       />
       <Suspense>
-        <GoogleAnalytics GA_MEASUREMENT_ID="G-EES3QVT0TF" />
+        <GoogleAnalytics GA_MEASUREMENT_ID={GA_MEASUREMENT_ID} />
       </Suspense>
       <ThemeWrapper>
         <RootStyleRegistry>

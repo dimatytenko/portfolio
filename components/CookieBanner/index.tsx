@@ -12,7 +12,6 @@ export default function CookieBanner() {
 
   useEffect(() => {
     const cookieConsent = getLocalStorage('cookie_consent');
-    console.log('cookieConsent', cookieConsent);
     if (cookieConsent === undefined) {
       setCookieConsent(null);
       return;
@@ -25,7 +24,6 @@ export default function CookieBanner() {
     window.gtag('consent', 'update', {
       analytics_storage: cookieConsent ? 'granted' : 'denied',
     });
-    console.log('cookieConsent', cookieConsent);
     setLocalStorage('cookie_consent', cookieConsent);
   }, [cookieConsent]);
 

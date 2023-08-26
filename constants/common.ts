@@ -17,3 +17,5 @@ export enum LINKS {
   TELEGRAM = 'https://t.me/dimatytenko',
   CV = 'https://drive.google.com/file/d/1wUIpae-JXEsF-2mR2D-Wahlih-NXdVyG/view?usp=sharing',
 }
+
+export const GA_MEASUREMENT_ID = 'G-EES3QVT0TF';
