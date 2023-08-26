@@ -35,7 +35,7 @@ export default async function RootLayout({
         name="google-site-verification"
         content="SSU-yyXlydZ6CU4gAJSn-zhdB2X_JVXU0MoBwhztF1g"
       />
-      <GoogleAnalytics />
+      <GoogleAnalytics GA_MEASUREMENT_ID="G-EES3QVT0TF" />
       <ThemeWrapper>
         <RootStyleRegistry>
           <Layout font={poppins} dictionary={dictionary} lang={lang}>

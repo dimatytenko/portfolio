@@ -2,6 +2,8 @@
 
 import styled from 'styled-components';
 
+import {Media} from '@/ui-kit/theme/breakpoints';
+
 export const StyledCookieBanner = styled.div`
   position: fixed;
   left: 50%;
@@ -23,4 +25,14 @@ export const SubTitle = styled.h2`
   margin-bottom: 20px;
   color: ${({theme}) => theme.palette._text.tertiary};
   line-height: 1.2;
+`;
+
+export const ButtonsWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  ${Media.down.m} {
+    flex-direction: column;
+  }
 `;

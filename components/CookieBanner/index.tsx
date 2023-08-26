@@ -1,26 +1,28 @@
 'use client';
 
 import Link from 'next/link';
-import {setLocalStorage} from '@/lib/storageHelper';
+import {getLocalStorage, setLocalStorage} from '@/lib/storageHelper';
 import {useState, useEffect} from 'react';
 
-import {StyledCookieBanner, SubTitle} from './styles';
+import {StyledCookieBanner, SubTitle, ButtonsWrapper} from './styles';
 import {Button, TitleModifyre} from '@/app/[lang]/styles';
 
 export default function CookieBanner() {
-  const [cookieConsent, setCookieConsent] = useState(false);
+  const [cookieConsent, setCookieConsent] = useState<boolean | null>();
 
   useEffect(() => {
-    const storedCookieConsent = localStorage.getItem('cookie_consent');
-
-    setCookieConsent(!!storedCookieConsent);
-  }, [setCookieConsent]);
+    const cookieConsent = getLocalStorage('cookie_consent');
+    if (!cookieConsent) {
+      setCookieConsent(null);
+      return;
+    }
+    setCookieConsent(cookieConsent);
+  }, []);
 
   useEffect(() => {
-    const newValue = cookieConsent ? 'granted' : 'denied';
-
+    if (!cookieConsent || cookieConsent === null) return;
     window.gtag('consent', 'update', {
-      analytics_storage: newValue,
+      analytics_storage: cookieConsent ? 'granted' : 'denied',
     });
 
     setLocalStorage('cookie_consent', cookieConsent);
@@ -29,7 +31,7 @@ export default function CookieBanner() {
     console.log('Cookie Consent: ', cookieConsent);
   }, [cookieConsent]);
 
-  if (cookieConsent) {
+  if (cookieConsent !== null) {
     return null;
   }
 
@@ -43,14 +45,14 @@ export default function CookieBanner() {
         </Link>
       </SubTitle>
 
-      <div>
+      <ButtonsWrapper>
         <Button type="ghost" onClick={() => setCookieConsent(false)}>
           Decline
         </Button>
         <Button type="secondary" onClick={() => setCookieConsent(true)}>
           Allow Cookies
         </Button>
-      </div>
+      </ButtonsWrapper>
     </StyledCookieBanner>
   );
 }
