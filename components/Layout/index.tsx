@@ -36,7 +36,7 @@ export const Layout: React.FC<ILayoutProps> = ({
   return (
     <StyledBody className={font.className}>
       <Suspense>
-        <Analytics />;
+        <Analytics />
       </Suspense>
       <Wrapper
         $isNotFound={!Paths.includes(pathname.split('/').slice(2).join('/'))}>
