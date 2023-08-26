@@ -66,7 +66,7 @@ export const NavList = styled.div`
 
 export const Menu = styled.div`
   position: relative;
-  z-index: 9999;
+  z-index: 999;
 `;
 
 export const ElementsWrapper = styled.div`

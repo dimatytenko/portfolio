@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import {getLocalStorage, setLocalStorage} from '@/lib/storageHelper';
+import {setLocalStorage} from '@/lib/storageHelper';
 import {useState, useEffect} from 'react';
 
 import {StyledCookieBanner, SubTitle} from './styles';
@@ -11,9 +11,9 @@ export default function CookieBanner() {
   const [cookieConsent, setCookieConsent] = useState(false);
 
   useEffect(() => {
-    const storedCookieConsent = getLocalStorage('cookie_consent', null);
+    const storedCookieConsent = localStorage.getItem('cookie_consent');
 
-    setCookieConsent(storedCookieConsent);
+    setCookieConsent(!!storedCookieConsent);
   }, [setCookieConsent]);
 
   useEffect(() => {
@@ -28,6 +28,10 @@ export default function CookieBanner() {
     //For Testing
     console.log('Cookie Consent: ', cookieConsent);
   }, [cookieConsent]);
+
+  if (cookieConsent) {
+    return null;
+  }
 
   return (
     <StyledCookieBanner>

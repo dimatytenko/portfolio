@@ -6,7 +6,7 @@ export const StyledCookieBanner = styled.div`
   position: fixed;
   left: 50%;
   top: 10px;
-  z-index: 999;
+  z-index: 9999;
   display: flex;
   flex-direction: column;
   justify-content: center;
