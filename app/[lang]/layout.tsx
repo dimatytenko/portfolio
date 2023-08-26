@@ -29,6 +29,10 @@ export default async function RootLayout({
 
   return (
     <html lang={lang}>
+      <meta
+        name="google-site-verification"
+        content="SSU-yyXlydZ6CU4gAJSn-zhdB2X_JVXU0MoBwhztF1g"
+      />
       <GoogleAnalytics />
       <ThemeWrapper>
         <RootStyleRegistry>
