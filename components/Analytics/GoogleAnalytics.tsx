@@ -8,6 +8,7 @@ export default function GoogleAnalytics() {
   return (
     <>
       <Script
+        async
         strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
       />
@@ -16,18 +17,12 @@ export default function GoogleAnalytics() {
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-                gtag('consent', 'default', {
-                    'analytics_storage': 'denied'
-                });
-                
-                gtag('config', '${GA_ID}', {
-                    page_path: window.location.pathname,
-                });
-                `,
+            gtag('config', '${GA_ID}');
+          `,
         }}
       />
     </>
