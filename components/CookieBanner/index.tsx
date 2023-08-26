@@ -27,9 +27,6 @@ export default function CookieBanner() {
     });
     console.log('cookieConsent', cookieConsent);
     setLocalStorage('cookie_consent', cookieConsent);
-
-    //For Testing
-    console.log('Cookie Consent: ', cookieConsent);
   }, [cookieConsent]);
 
   if (cookieConsent !== null) {
@@ -47,7 +44,7 @@ export default function CookieBanner() {
       </SubTitle>
 
       <ButtonsWrapper>
-        <Button type="ghost" onClick={() => setCookieConsent(false)}>
+        <Button type="ghost" onClick={() => setCookieConsent(true)}>
           Decline
         </Button>
         <Button type="secondary" onClick={() => setCookieConsent(true)}>
