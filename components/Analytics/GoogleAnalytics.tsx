@@ -8,7 +8,6 @@ export default function GoogleAnalytics() {
   return (
     <>
       <Script
-        async
         strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
       />

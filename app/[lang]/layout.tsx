@@ -10,7 +10,7 @@ import {i18n} from '@/i18n-config';
 import {Locale} from '@/i18n-config';
 import {getDictionary} from '@/get-dictionary';
 import {Layout} from '@/components/Layout';
-import GoogleAnalytics from '@/components/Analytics/GoogleAnalytics';
+// import GoogleAnalytics from '@/components/Analytics/GoogleAnalytics';
 
 const poppins = Poppins({subsets: ['latin'], weight: ['400', '600', '700']});
 
@@ -33,7 +33,7 @@ export default async function RootLayout({
         name="google-site-verification"
         content="SSU-yyXlydZ6CU4gAJSn-zhdB2X_JVXU0MoBwhztF1g"
       />
-      <GoogleAnalytics />
+      {/* <GoogleAnalytics /> */}
       <ThemeWrapper>
         <RootStyleRegistry>
           <Layout font={poppins} dictionary={dictionary} lang={lang}>
