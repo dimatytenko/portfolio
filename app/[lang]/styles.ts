@@ -86,7 +86,7 @@ export const SubTitle = styled.h2`
 
 export const Button = styled.a.attrs({
   target: '_blank',
-})<{type?: 'secondary'}>`
+})<{type?: 'secondary' | 'ghost'}>`
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -96,6 +96,8 @@ export const Button = styled.a.attrs({
   background: ${({theme, type}) =>
     type && type === 'secondary'
       ? theme.palette._bg.linear_3
+      : type && type === 'ghost'
+      ? 'transparent'
       : theme.palette._bg.button};
   color: ${({theme}) => theme.palette._text.primary};
   text-transform: uppercase;
