@@ -14,6 +14,7 @@ import {TDictionary} from '@/types/locale';
 import {useDrawer} from '@/hooks/useDrawer';
 import {Locale} from '@/i18n-config';
 import {Paths} from '@/constants/common';
+import CookieBanner from '@/components/CookieBanner';
 
 interface ILayoutProps {
   font: NextFont;
@@ -33,6 +34,7 @@ export const Layout: React.FC<ILayoutProps> = ({
 
   return (
     <StyledBody className={font.className}>
+      <CookieBanner />
       <Wrapper
         $isNotFound={!Paths.includes(pathname.split('/').slice(2).join('/'))}>
         <Header
