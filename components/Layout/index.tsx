@@ -15,7 +15,7 @@ import {TDictionary} from '@/types/locale';
 import {useDrawer} from '@/hooks/useDrawer';
 import {Locale} from '@/i18n-config';
 import {Paths} from '@/constants/common';
-import Analytics from '@/components/Analytics';
+import {Body_Scripts} from '@/components/Analytics';
 
 interface ILayoutProps {
   font: NextFont;
@@ -36,7 +36,7 @@ export const Layout: React.FC<ILayoutProps> = ({
   return (
     <StyledBody className={font.className}>
       <Suspense>
-        <Analytics />
+        <Body_Scripts />
       </Suspense>
       <Wrapper
         $isNotFound={!Paths.includes(pathname.split('/').slice(2).join('/'))}>
