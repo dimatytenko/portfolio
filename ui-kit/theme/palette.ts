@@ -6,6 +6,7 @@ const _bg = {
   blue: '#61A0FF',
   green: '#00D722',
   dark: '#0f1624',
+  banner: '#374151',
   linear_1: 'linear-gradient(135deg, #ee9ae5 0%, #5961f9 100%)',
   linear_2: 'linear-gradient(135deg, #FFF6B7 0%, #F6416C 100%)',
   linear_3: 'linear-gradient(270deg, #13adc7 0%, #6978d1 66.67%, #945dd6 100%)',

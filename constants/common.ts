@@ -1,12 +1,26 @@
 import {Locale} from '@/i18n-config';
 
-export const Paths = ['', 'about', 'projects', 'services'];
+export enum PATHS {
+  HOME = '',
+  ABOUT = 'about',
+  PROJECTS = 'projects',
+  SERVICES = 'services',
+  COOKIES = 'info/cookies',
+}
+
+export const ExcludePaths = [
+  PATHS.HOME,
+  PATHS.ABOUT,
+  PATHS.PROJECTS,
+  PATHS.SERVICES,
+  PATHS.COOKIES,
+] as string[];
 
 export const getPath = {
-  home: (lang: Locale) => `/${lang}/`,
-  about: (lang: Locale) => `/${lang}/about`,
-  projects: (lang: Locale) => `/${lang}/projects`,
-  services: (lang: Locale) => `/${lang}/services`,
+  home: (lang: Locale) => `/${lang}/${PATHS.HOME}`,
+  about: (lang: Locale) => `/${lang}/${PATHS.ABOUT}`,
+  projects: (lang: Locale) => `/${lang}/${PATHS.PROJECTS}`,
+  services: (lang: Locale) => `/${lang}/${PATHS.SERVICES}`,
 };
 
 export enum LINKS {
@@ -16,6 +30,7 @@ export enum LINKS {
   EMAIL = 'amgpetronass@gmail.com',
   TELEGRAM = 'https://t.me/dimatytenko',
   CV = 'https://drive.google.com/file/d/1wUIpae-JXEsF-2mR2D-Wahlih-NXdVyG/view?usp=sharing',
+  COOKIES = 'https://www.cookiepolicygenerator.com/sample-cookies-policy/',
 }
 
 export const GA_MEASUREMENT_ID = 'G-EES3QVT0TF';

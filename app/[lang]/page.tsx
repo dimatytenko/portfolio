@@ -9,6 +9,7 @@ import {
   Title,
   TitleModifyre,
   SubTitle,
+  ButtonWrapper,
   Button,
   CvIcon,
   RightSide,
@@ -65,10 +66,12 @@ export default async function Home({params: {lang}}: {params: {lang: Locale}}) {
                 </ToolboxWrapper>
               </Decor>
             </MobileWrapper>
-            <Button href={LINKS.CV}>
-              <CvIcon />
-              {dictionary['home'].cv}
-            </Button>
+            <ButtonWrapper>
+              <Button href={LINKS.CV}>
+                <CvIcon />
+                {dictionary['home'].cv}
+              </Button>
+            </ButtonWrapper>
           </LeftSide>
           <RightSide>
             <DecorIcon />

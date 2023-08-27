@@ -34,7 +34,7 @@ export const HeaderContent = styled.div`
 
 export const Logo = styled(Link)`
   position: relative;
-  z-index: 999;
+  z-index: 9990;
 `;
 
 export const LogoIcon = styled(IconSvg).attrs({
@@ -66,7 +66,7 @@ export const NavList = styled.div`
 
 export const Menu = styled.div`
   position: relative;
-  z-index: 999;
+  z-index: 9990;
 `;
 
 export const ElementsWrapper = styled.div`

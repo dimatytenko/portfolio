@@ -7,7 +7,7 @@ import {Media} from '@/ui-kit/theme/breakpoints';
 export const StyledCookieBanner = styled.div`
   position: fixed;
   left: 50%;
-  top: 10px;
+  bottom: 30px;
   z-index: 9999;
   display: flex;
   flex-direction: column;
@@ -15,7 +15,7 @@ export const StyledCookieBanner = styled.div`
   align-items: center;
   transform: translateX(-50%);
   padding: 12px 16px;
-  background: ${({theme}) => theme.palette._bg.dark};
+  background: ${({theme}) => theme.palette._bg.banner};
   border-radius: 16px;
 `;
 

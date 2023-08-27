@@ -42,10 +42,16 @@ export default function CookieBanner() {
       </SubTitle>
 
       <ButtonsWrapper>
-        <Button type="ghost" onClick={() => setCookieConsent(true)}>
+        <Button
+          type="ghost"
+          size="small"
+          onClick={() => setCookieConsent(true)}>
           Decline
         </Button>
-        <Button type="secondary" onClick={() => setCookieConsent(true)}>
+        <Button
+          type="secondary"
+          size="small"
+          onClick={() => setCookieConsent(true)}>
           Allow Cookies
         </Button>
       </ButtonsWrapper>

@@ -38,9 +38,24 @@
     "titleAbout": "Dmytro Tytenko - About ⭐ Front-end Developer ⭐ Sumy, ⚡Ukraine⚡",
     "titleProjects": "Dmytro Tytenko - Projects ⭐ Front-end Developer ⭐ Sumy, ⚡Ukraine⚡",
     "titleServices": "Tytenko Dmytro - technologies ⭐ Front-end Developer ⭐ Sumy, Ukraine",
+    "titleCookies": "Tytenko Dmytro - cookies ⭐ Front-end Developer ⭐ Sumy, Ukraine",
     "description": "Web developer 【Dmytro Tytenko】 ➨ Creation of turnkey sites of any complexity ✔️ high quality and a wide range of services ✔️ ➨ Portfolio of sites in Sumy ☎",
     "descriptionAbout": "Information about me. Web developer 【Dmytro Tytenko】 ➨ Creation of turnkey sites of any complexity ✔️ high quality and a wide range of services ✔️ ➨ Portfolio of sites in Sumy ☎",
     "descriptionProjects": "My projects. Web developer 【Dmytro Tytenko】 ➨ Creation of turnkey sites of any complexity ✔️ high quality and a wide range of services ✔️ ➨ Portfolio of sites in Sumy ☎",
-    "descriptionServices": "The technologies I use. Web developer 【Dmytro Tytenko】 ➨ Creation of turnkey sites of any complexity ✔️ high quality and a wide range of services ✔️ ➨ Portfolio of sites in Sumy ☎"
+    "descriptionServices": "The technologies I use. Web developer 【Dmytro Tytenko】 ➨ Creation of turnkey sites of any complexity ✔️ high quality and a wide range of services ✔️ ➨ Portfolio of sites in Sumy ☎",
+    "descriptionCookies": "Cookie Policy for webrozrobnyk.in.ua. Web developer 【Dmytro Tytenko】 ➨ Creation of turnkey sites of any complexity ✔️ high quality and a wide range of services ✔️ ➨ Portfolio of sites in Sumy"
+  },
+  "cookies": {
+    "title": "Cookie Policy for webrozrobnyk.in.ua",
+    "use": "This is the Cookie Policy for webrozrobnyk.in.ua, accessible from https://www.webrozrobnyk.in.ua.",
+    "noteTitle": "Note",
+    "note": "This site uses cookies for Google Analytics which is opted-in when you press `Allow Cookies`.",
+    "whatTitle": "What Are Cookies",
+    "what": "As is common practice with almost all professional websites this site uses cookies, which are tiny files that are downloaded to your computer, to improve your experience. This page describes what information they gather, how we use it and why we sometimes need to store these cookies. We will also share how you can prevent these cookies from being stored however this may downgrade or `break` certain elements of the sites functionality.",
+    "howTitle": "How We Use Cookies",
+    "how": "We use cookies for a variety of reasons detailed below. Unfortunately in most cases there are no industry standard options for disabling cookies without completely disabling the functionality and features they add to this site. It is recommended that you leave on all cookies if you are not sure whether you need them or not in case they are used to provide a service that you use.",
+    "moreTitle": "More Information",
+    "more": " Hopefully that has clarified things for you and as was previously mentioned if there is something that you aren`t sure whether you need or not it`s usually safer to leave cookies enabled in case it does interact with one of the features you use on our site. For more general information on cookies, please read the",
+    "link": "Cookies Policy article"
   }
 }

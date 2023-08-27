@@ -13,7 +13,7 @@ import {Wrapper, StyledMain} from './styles';
 import {TDictionary} from '@/types/locale';
 import {useDrawer} from '@/hooks/useDrawer';
 import {Locale} from '@/i18n-config';
-import {Paths} from '@/constants/common';
+import {ExcludePaths} from '@/constants/common';
 import CookieBanner from '@/components/CookieBanner';
 
 interface ILayoutProps {
@@ -36,7 +36,9 @@ export const Layout: React.FC<ILayoutProps> = ({
     <StyledBody className={font.className}>
       <CookieBanner />
       <Wrapper
-        $isNotFound={!Paths.includes(pathname.split('/').slice(2).join('/'))}>
+        $isNotFound={
+          !ExcludePaths.includes(pathname.split('/').slice(2).join('/'))
+        }>
         <Header
           isOpen={isOpen}
           toggleDrawer={toggleDrawer}

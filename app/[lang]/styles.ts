@@ -86,7 +86,7 @@ export const SubTitle = styled.h2`
 
 export const Button = styled.a.attrs({
   target: '_blank',
-})<{type?: 'secondary' | 'ghost'}>`
+})<{type?: 'secondary' | 'ghost'; size?: 'small'}>`
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -101,7 +101,7 @@ export const Button = styled.a.attrs({
       : theme.palette._bg.button};
   color: ${({theme}) => theme.palette._text.primary};
   text-transform: uppercase;
-  font-size: 24px;
+  font-size: ${({size}) => (size && size === 'small' ? '14px' : '24px')};
   opacity: 1;
   transition: opacity ${({theme}) => theme.transition.primary};
 
@@ -110,8 +110,13 @@ export const Button = styled.a.attrs({
   }
 
   ${Media.down.m} {
-    margin-top: 40px;
     width: 100%;
+  }
+`;
+
+export const ButtonWrapper = styled.div`
+  ${Media.down.m} {
+    margin-top: 40px;
   }
 `;
 

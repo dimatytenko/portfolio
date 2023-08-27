@@ -95,7 +95,7 @@ export const projects = [
   },
   {
     imgSrc: '/img/projects/filmoteka(spa).jpg',
-    title: 'filmoteka(spa)',
+    title: 'filmoteka (spa)',
     description: {
       en: 'It is a web application developed with React. It provides users with the ability to conveniently search and watch movies.',
       uk: 'Це веб-додаток, розроблений за допомогою React. Він надає користувачам можливість зручного пошуку та перегляду фільмів.',
