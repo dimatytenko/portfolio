@@ -1,7 +1,7 @@
 import React from 'react';
 import {usePathname} from 'next/navigation';
 
-import {getPath} from '@/constants/common';
+import {GET_PATH} from '@/constants/common';
 import {NavItem, StyledLink} from './styles';
 import {TDictionary} from '@/types/locale';
 import {Locale} from '@/i18n-config';
@@ -9,15 +9,15 @@ import {Locale} from '@/i18n-config';
 const navItems = [
   {
     title: 'about',
-    path: getPath.about,
+    path: GET_PATH.about,
   },
   {
     title: 'projects',
-    path: getPath.projects,
+    path: GET_PATH.projects,
   },
   {
     title: 'services',
-    path: getPath.services,
+    path: GET_PATH.services,
   },
 ];
 

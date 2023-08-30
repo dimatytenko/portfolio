@@ -5,7 +5,7 @@ import {getLocalStorage, setLocalStorage} from '@/lib/storageHelper';
 import {useState, useEffect} from 'react';
 
 import {StyledCookieBanner, SubTitle, ButtonsWrapper} from './styles';
-import {Button, TitleModifyre} from '@/app/[lang]/styles';
+import {ButtonTypeButton, TitleModifyre} from '@/app/[lang]/styles';
 
 export default function CookieBanner() {
   const [cookieConsent, setCookieConsent] = useState<boolean | null>();
@@ -42,18 +42,20 @@ export default function CookieBanner() {
       </SubTitle>
 
       <ButtonsWrapper>
-        <Button
+        <ButtonTypeButton
           type="ghost"
           size="small"
-          onClick={() => setCookieConsent(true)}>
+          onClick={() => setCookieConsent(true)}
+          aria-label="Decline">
           Decline
-        </Button>
-        <Button
+        </ButtonTypeButton>
+        <ButtonTypeButton
           type="secondary"
           size="small"
-          onClick={() => setCookieConsent(true)}>
+          onClick={() => setCookieConsent(true)}
+          aria-label="Allow Cookies">
           Allow Cookies
-        </Button>
+        </ButtonTypeButton>
       </ButtonsWrapper>
     </StyledCookieBanner>
   );

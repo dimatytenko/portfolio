@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 
 import {AvatarWrapper} from './styles';
-import avatar from '@/public/img/static/photo_2.png';
+import avatar from '@/public/img/static/photo_2.webp';
 
 export const Avatar = () => {
   return (

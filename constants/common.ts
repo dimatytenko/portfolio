@@ -8,7 +8,7 @@ export enum PATHS {
   COOKIES = 'info/cookies',
 }
 
-export const ExcludePaths = [
+export const EXCLUDE_PATHS = [
   PATHS.HOME,
   PATHS.ABOUT,
   PATHS.PROJECTS,
@@ -16,7 +16,7 @@ export const ExcludePaths = [
   PATHS.COOKIES,
 ] as string[];
 
-export const getPath = {
+export const GET_PATH = {
   home: (lang: Locale) => `/${lang}/${PATHS.HOME}`,
   about: (lang: Locale) => `/${lang}/${PATHS.ABOUT}`,
   projects: (lang: Locale) => `/${lang}/${PATHS.PROJECTS}`,

@@ -27,8 +27,10 @@ import {
   DesktopWrapper,
   MobileWrapper,
 } from '@/app/[lang]/styles';
-import monitor from '@/public/img/static/monitor.png';
-import photo_1 from '@/public/img/static/photo_1.png';
+import monitorMob from '@/public/img/static/monitor-mob.webp';
+import monitorDesk from '@/public/img/static/monitor-desk.webp';
+
+import photo_1 from '@/public/img/static/photo_1.webp';
 import {LINKS} from '@/constants/common';
 import {getDictionary} from '@/get-dictionary';
 import {Locale} from '@/i18n-config';
@@ -51,10 +53,10 @@ export default async function Home({params: {lang}}: {params: {lang: Locale}}) {
               <Decor>
                 <ImageWrapper>
                   <Image
-                    src={monitor}
+                    src={monitorMob}
                     alt="monitor"
-                    width={476}
-                    height={464}
+                    width={286}
+                    height={274}
                     priority={true}
                   />
                 </ImageWrapper>
@@ -79,10 +81,10 @@ export default async function Home({params: {lang}}: {params: {lang: Locale}}) {
               <Decor>
                 <ImageWrapper>
                   <Image
-                    src={monitor}
+                    src={monitorDesk}
                     alt="monitor"
-                    width={476}
-                    height={464}
+                    width={376}
+                    height={364}
                     priority={true}
                   />
                 </ImageWrapper>

@@ -20,14 +20,17 @@ import {TDictionary} from '@/types/locale';
 const socialIcons: {
   type: icon;
   link: string;
+  ariaLabel: string;
 }[] = [
   {
     type: 'github',
     link: LINKS.GITHUB,
+    ariaLabel: 'git hub',
   },
   {
     type: 'linkedin',
     link: LINKS.LINKEDIN,
+    ariaLabel: 'linkedin',
   },
 ];
 
@@ -42,7 +45,10 @@ export const Footer: React.FC<IFooterProps> = ({dictionary}) => {
         <FooterContent>
           <SocialIcons>
             {socialIcons.map((icon) => (
-              <SocialIconWrapper href={icon.link} key={icon.type}>
+              <SocialIconWrapper
+                href={icon.link}
+                key={icon.type}
+                aria-label={icon.ariaLabel}>
                 <SocialIcon type={icon.type} />
               </SocialIconWrapper>
             ))}

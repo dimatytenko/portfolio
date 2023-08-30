@@ -13,7 +13,7 @@ import {Wrapper, StyledMain} from './styles';
 import {TDictionary} from '@/types/locale';
 import {useDrawer} from '@/hooks/useDrawer';
 import {Locale} from '@/i18n-config';
-import {ExcludePaths} from '@/constants/common';
+import {EXCLUDE_PATHS} from '@/constants/common';
 import CookieBanner from '@/components/CookieBanner';
 
 interface ILayoutProps {
@@ -37,7 +37,7 @@ export const Layout: React.FC<ILayoutProps> = ({
       <CookieBanner />
       <Wrapper
         $isNotFound={
-          !ExcludePaths.includes(pathname.split('/').slice(2).join('/'))
+          !EXCLUDE_PATHS.includes(pathname.split('/').slice(2).join('/'))
         }>
         <Header
           isOpen={isOpen}

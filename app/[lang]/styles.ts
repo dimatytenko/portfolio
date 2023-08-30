@@ -114,6 +114,37 @@ export const Button = styled.a.attrs({
   }
 `;
 
+export const ButtonTypeButton = styled.button<{
+  type?: 'secondary' | 'ghost';
+  size?: 'small';
+}>`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 18px 56px;
+  border-radius: 40px;
+  background: ${({theme, type}) =>
+    type && type === 'secondary'
+      ? theme.palette._bg.linear_3
+      : type && type === 'ghost'
+      ? 'transparent'
+      : theme.palette._bg.button};
+  color: ${({theme}) => theme.palette._text.primary};
+  text-transform: uppercase;
+  font-size: ${({size}) => (size && size === 'small' ? '14px' : '24px')};
+  opacity: 1;
+  transition: opacity ${({theme}) => theme.transition.primary};
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  ${Media.down.m} {
+    width: 100%;
+  }
+`;
+
 export const ButtonWrapper = styled.div`
   ${Media.down.m} {
     margin-top: 40px;
@@ -263,17 +294,17 @@ export const ImageWrapper = styled.div`
   right: -110px;
   bottom: 0;
 
-  & > img {
-    width: 376px;
-    height: 364px;
-  }
+  // & > img {
+  //   width: 376px;
+  //   height: 364px;
+  // }
 
   ${Media.down.s} {
     right: -40px;
-    & > img {
-      width: 286px;
-      height: 274px;
-    }
+    // & > img {
+    //   width: 286px;
+    //   height: 274px;
+    // }
   }
 `;
 

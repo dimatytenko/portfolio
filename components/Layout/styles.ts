@@ -7,7 +7,7 @@ import {Media} from '@/ui-kit/theme/breakpoints';
 
 export const Wrapper = styled.div<{$isNotFound?: boolean}>`
   background-image: ${({$isNotFound}) =>
-    $isNotFound && 'url(/img/static/not_found_bg.png)'};
+    $isNotFound && 'url(/img/static/not_found_bg.webp)'};
   background-repeat: no-repeat;
   background-position: top right;
   background-size: auto 100%;

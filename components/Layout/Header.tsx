@@ -14,7 +14,7 @@ import {
   Menu,
   ElementsWrapper,
 } from './styles';
-import {getPath} from '@/constants/common';
+import {GET_PATH} from '@/constants/common';
 import {NavigationItems} from '@/components/NavigationItems';
 import LocaleSwitcher from '@/components/LocaleSwitcher';
 import {TDictionary} from '@/types/locale';
@@ -39,7 +39,10 @@ export const Header: React.FC<IHeaderProps> = ({
     <StyledHeader>
       <Container>
         <HeaderContent>
-          <Logo href={getPath.home(lang)} onClick={onCloseDrawer}>
+          <Logo
+            href={GET_PATH.home(lang)}
+            onClick={onCloseDrawer}
+            aria-label="Logo">
             <LogoIcon />
           </Logo>
           <DesktopWrapper>
@@ -54,7 +57,7 @@ export const Header: React.FC<IHeaderProps> = ({
           </DesktopWrapper>
           <MobileWrapper>
             <Menu onClick={toggleDrawer}>
-              <Hamburger toggled={isOpen} />
+              <Hamburger toggled={isOpen} aria-label="Burger button" />
             </Menu>
           </MobileWrapper>
         </HeaderContent>
