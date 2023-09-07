@@ -55,21 +55,41 @@ export const Footer: React.FC<IFooterProps> = ({dictionary}) => {
           </SocialIcons>
           <FooterLinksWrapper>
             <FooterLink href={`tel: ${LINKS.PHONE}`}>
-              <TextBlockWrapper>
-                <FooterText>{dictionary['footer'].call}:</FooterText>
-                <FooterText>{LINKS.PHONE}</FooterText>
+              <TextBlockWrapper color="#ffdd1c">
+                <FooterText
+                  color="#ffdd1c"
+                  data-text={`${dictionary['footer'].call}:`}>
+                  {dictionary['footer'].call}:
+                </FooterText>
+                <FooterText color="#ffdd1c" data-text={LINKS.PHONE}>
+                  {LINKS.PHONE}
+                </FooterText>
               </TextBlockWrapper>
             </FooterLink>
             <FooterLink href={LINKS.TELEGRAM}>
-              <TextBlockWrapper>
-                <FooterText>{dictionary['footer'].telegram}:</FooterText>
-                <FooterText>{`@${LINKS.TELEGRAM.split('/')[3]}`}</FooterText>
+              <TextBlockWrapper color="#ff6492">
+                <FooterText
+                  color="#ff6492"
+                  data-text={`${dictionary['footer'].telegram}:`}>
+                  {dictionary['footer'].telegram}:
+                </FooterText>
+                <FooterText
+                  color="#ff6492"
+                  data-text={`@${LINKS.TELEGRAM.split('/')[3]}`}>{`@${
+                  LINKS.TELEGRAM.split('/')[3]
+                }`}</FooterText>
               </TextBlockWrapper>
             </FooterLink>
             <FooterLink href={`mailto: ${LINKS.EMAIL}`}>
-              <TextBlockWrapper>
-                <FooterText>{dictionary['footer'].email}:</FooterText>
-                <FooterText>{LINKS.EMAIL}</FooterText>
+              <TextBlockWrapper color="#00dc82">
+                <FooterText
+                  color="#00dc82"
+                  data-text={`${dictionary['footer'].email}:`}>
+                  {dictionary['footer'].email}:
+                </FooterText>
+                <FooterText color="#00dc82" data-text={LINKS.EMAIL}>
+                  {LINKS.EMAIL}
+                </FooterText>
               </TextBlockWrapper>
             </FooterLink>
             <ArrowIcon />

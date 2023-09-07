@@ -138,7 +138,7 @@ export const SocialIcon = styled(IconSvg).attrs({
   transition: fill ${({theme}) => theme.transition.primary};
 `;
 
-export const TextBlockWrapper = styled.div`
+export const TextBlockWrapper = styled.div<{color: string}>`
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -147,9 +147,16 @@ export const TextBlockWrapper = styled.div`
   &:focus p {
     color: ${({theme}) => theme.palette._text.primary};
   }
+
+  &:hover p::before {
+    width: 100%;
+    filter: drop-shadow(0 0 25px ${({color}) => color});
+  }
 `;
 
 export const FooterLinksWrapper = styled.div`
+  width: fit-content;
+  position: relative;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -160,13 +167,24 @@ export const FooterLinksWrapper = styled.div`
   }
 `;
 
-export const FooterText = styled.p`
+export const FooterText = styled.p<{color: string}>`
   color: ${({theme}) => theme.palette._text.secondary};
   font-size: 20px;
   transition: color ${({theme}) => theme.transition.primary};
 
   ${Media.down.s} {
     font-size: 18px;
+  }
+
+  &::before {
+    content: attr(data-text);
+    position: absolute;
+    color: ${({color}) => color};
+    width: 0;
+    overflow: hidden;
+    transition: 1s;
+    // border-right: 8px solid #00ade1;
+    // -webkit-text-stroke: 1px #00ade1;
   }
 `;
 
