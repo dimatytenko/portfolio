@@ -17,6 +17,7 @@ export const projects = [
     linkGithub: 'https://github.com/dimatytenko/portfolio',
     linkDemo: 'https://web-developer-sumy-portfolio.vercel.app/',
   },
+
   {
     imgSrc: '/img/projects/gallery.jpg',
     title: 'gallery',
@@ -36,6 +37,21 @@ export const projects = [
     ],
     linkGithub: 'https://github.com/dimatytenko/gallery',
     linkDemo: 'https://gallery-arounda.netlify.app/',
+  },
+  {
+    imgSrc: '/img/projects/english-excellence.jpg',
+    title: 'English excellence',
+    description: {
+      en: 'The website is built using HTML5, SASS, and Vite bundler. It is designed with an adaptive design approach to ensure a seamless experience across different devices. My section is Leave an application.',
+      uk: 'Веб-сайт створено за допомогою HTML5, SASS і Vite bundler. Він розроблений з адаптивним підходом до дизайну, щоб забезпечити безперебійну роботу на різних пристроях.',
+    },
+    technology: 'HTML/CSS',
+    technologies: ['HTML5', 'CSS', 'Vite', 'Adaptive design'],
+    linkGithub: 'https://github.com/dimatytenko/english-excellence',
+    linkDemo: 'https://tkachenkokaterina.github.io/english-excellence/',
+    team: true,
+    countTeam: 9,
+    role: 'Developer',
   },
   {
     imgSrc: '/img/projects/planner.jpg',
