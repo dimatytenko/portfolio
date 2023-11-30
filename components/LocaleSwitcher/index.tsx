@@ -15,7 +15,10 @@ export default function LocaleSwitcher() {
     return segments.join('/');
   };
 
-  console.log('process.env.NEXT_PUBLIC_HELLO', process.env.NEXT_PUBLIC_HELLO);
+  console.log(
+    'process.env.NEXT_PUBLIC_HELLO---',
+    process.env.NEXT_PUBLIC_HELLO
+  );
 
   return (
     <Wrapper>
