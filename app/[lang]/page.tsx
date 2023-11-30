@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import type {Metadata} from 'next';
-
 import {
   HomeWrapper,
   HomeContent,
