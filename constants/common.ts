@@ -25,11 +25,11 @@ export const GET_PATH = {
 
 export enum LINKS {
   GITHUB = 'https://github.com/dimatytenko',
-  LINKEDIN = 'https://www.linkedin.com/in/dima-tytenko-a5b26a21b/',
+  LINKEDIN = 'https://www.linkedin.com/in/dimatytenko',
   PHONE = '+380666812092',
   EMAIL = 'amgpetronass@gmail.com',
   TELEGRAM = 'https://t.me/dimatytenko',
-  CV = 'https://drive.google.com/file/d/1wUIpae-JXEsF-2mR2D-Wahlih-NXdVyG/view?usp=sharing',
+  CV = 'https://drive.google.com/file/d/1IPlivFH_khN-Xcl7mf3RLQbJoLsPbtxP/view?usp=sharing',
   COOKIES = 'https://www.cookiepolicygenerator.com/sample-cookies-policy/',
 }
 

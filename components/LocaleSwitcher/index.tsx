@@ -19,6 +19,7 @@ export default function LocaleSwitcher() {
     'process.env.NEXT_PUBLIC_HELLO---',
     process.env.NEXT_PUBLIC_HELLO
   );
+  console.log('process.env.HELLO---', process.env.HELLO);
 
   return (
     <Wrapper>
