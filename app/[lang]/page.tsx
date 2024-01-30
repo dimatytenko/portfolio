@@ -127,5 +127,7 @@ export async function generateMetadata({
   return {
     title: dictionary['meta'].title,
     description: dictionary['meta'].description,
+
+    // additionalMetaTags: [{name: 'freelancehunt', content: 'f22b9f5ab098322'}],
   };
 }
