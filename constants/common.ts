@@ -29,7 +29,7 @@ export enum LINKS {
   PHONE = '+380666812092',
   EMAIL = 'amgpetronass@gmail.com',
   TELEGRAM = 'https://t.me/dimatytenko',
-  CV = 'https://drive.google.com/file/d/1IPlivFH_khN-Xcl7mf3RLQbJoLsPbtxP/view?usp=sharing',
+  CV = 'https://drive.google.com/file/d/1wUIpae-JXEsF-2mR2D-Wahlih-NXdVyG/view?usp=sharing',
   COOKIES = 'https://www.cookiepolicygenerator.com/sample-cookies-policy/',
 }
 
