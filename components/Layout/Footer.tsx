@@ -48,7 +48,11 @@ export const Footer: React.FC<IFooterProps> = ({dictionary}) => {
               <SocialIconWrapper
                 href={icon.link}
                 key={icon.type}
-                aria-label={icon.ariaLabel}>
+                aria-label={icon.ariaLabel}
+                target="_blank"
+                rel="
+            noopener noreferrer
+            ">
                 <SocialIcon type={icon.type} />
               </SocialIconWrapper>
             ))}
@@ -66,7 +70,12 @@ export const Footer: React.FC<IFooterProps> = ({dictionary}) => {
                 </FooterText>
               </TextBlockWrapper>
             </FooterLink>
-            <FooterLink href={LINKS.TELEGRAM}>
+            <FooterLink
+              href={LINKS.TELEGRAM}
+              target="_blank"
+              rel="
+            noopener noreferrer
+            ">
               <TextBlockWrapper color="#ff6492">
                 <FooterText
                   color="#ff6492"
