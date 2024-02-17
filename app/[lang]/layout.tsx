@@ -37,6 +37,10 @@ export default async function RootLayout({
         content="SSU-yyXlydZ6CU4gAJSn-zhdB2X_JVXU0MoBwhztF1g"
       />
       <meta name="freelancehunt" content="f22b9f5ab098322" />
+      <meta
+        name="google-site-verification"
+        content="SSU-yyXlydZ6CU4gAJSn-zhdB2X_JVXU0MoBwhztF1g"
+      />
       <GoogleAnalytics GA_MEASUREMENT_ID={GA_MEASUREMENT_ID} />
       <ThemeWrapper>
         <RootStyleRegistry>
